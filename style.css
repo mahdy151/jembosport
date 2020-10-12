@@ -23,6 +23,12 @@ a {
   color: #e4e4e4;
 }
 
+body{
+  justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
 .product-card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -167,26 +173,27 @@ a {
   -webkit-transform-origin: center;
       -ms-transform-origin: center;
           transform-origin: center;
-  top:30%;
-  transform: translate(5%,-50%)scale(0.9)rotateZ(25deg);
+  top:35%;
+  transform: translate(0%,-50%)scale(0.9)rotateZ(20deg);
 }
 
 .card-container .card .imgBx img {
   position: absolute;
   top: 50%;
-  left: 45%;
-  -webkit-transform: translate(-50%, -50%) rotate(-25deg);
-      -ms-transform: translate(-50%, -50%) rotate(-25deg);
-          transform: translate(-50%, -50%) rotate(-25deg);
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%)rotateZ(-25deg)scaleX(-1);
+      -ms-transform: translate(-50%, -50%)rotateZ(-25deg)scaleX(-1) ;
+          transform: translate(-50%, -50%)rotateZ(-25deg)scaleX(-1) ;
   width: 320px;
-  -webkit-transition: ease-out 0.6s;
-  -o-transition: ease-out 0.6s;
-  transition: ease-out 0.6s
+  -webkit-transition: ease-out 0.8s;
+  -o-transition: ease-out 0.8s;
+  transition: ease-out 0.8s
 }
 
 .card-container .card .contentBx {
   position: absolute;
-  bottom: 0;
+  bottom: -25%;
+  left: 50%;
   width: 100%;
   text-align: center;
   -webkit-transition: ease-out .7s;
@@ -194,7 +201,9 @@ a {
   transition: ease-out .7s;
   overflow: hidden;
   border-radius: 20px;
-  opacity: 0;
+  opacity: 1;
+  height: 40%;
+  transform: translate(-50%, -60%);
 }
 
 .card-container .card:hover .contentBx {
