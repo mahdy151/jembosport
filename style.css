@@ -135,7 +135,7 @@ a {
   background-color: transparent;
   z-index: 3;
   transform: translate(-50%, -50%);
-  transition: ease-out 0.6s;
+  transition: ease-out 0.8s;
 }
 .card-container .card:hover #brand-logo{
   top: 25px;
@@ -143,32 +143,27 @@ a {
   width: 40px;
   transform: translate(-50%, -50%);
 }
-.card-container .card #brand-logo .img {
-  background-color: transparent
-}
 
 .card-container .card .imgBx {
   position: absolute;
-  top: 40%;
+  top: 65%;
   z-index: 10;
   width: 100%;
-  height: 220px;
-  -webkit-transition: ease-out 0.6s;
-  -o-transition: ease-out 0.6s;
-  transition: ease-out 0.6s;
+  -webkit-transition: ease-out 0.8s;
+  -o-transition: ease-out 0.8s;
+  transition: ease-out 0.8s;
   background-repeat: no-repeat;
 }
 
 .card-container .card:hover .imgBx {
-  -webkit-transform: translatex(5%)scale(0.9)rotateZ(25deg);
-      -ms-transform: translatex(5%)scale(0.9)rotate(25deg);
-          transform: translatex(5%)scale(0.9)rotateZ(25deg);
+  /* -webkit-transform: translate(5%,-40%)scale(0.9)rotateZ(25deg); */
+      /* -ms-transform: translate(5%,-40%)scale(0.9)rotate(25deg); */
+          /* transform: translate(5%,-40%)scale(0.9)rotateZ(25deg); */
   -webkit-transform-origin: center;
       -ms-transform-origin: center;
           transform-origin: center;
-  -webkit-transition: ease-out 0.6s;
-  -o-transition: ease-out 0.6s;
-  transition: ease-out 0.6s;
+  top:35%;
+  transform: translate(5%,-50%)scale(0.9)rotateZ(25deg);
 }
 
 .card-container .card .imgBx img {
