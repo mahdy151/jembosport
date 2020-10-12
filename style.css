@@ -83,7 +83,7 @@ a {
   -webkit-transition: ease-out 0.5s;
   -o-transition: ease-out 0.5s;
   transition: ease-out 0.5s;
-  overflow: visible;
+  overflow: hidden;
   border-radius: 20px;
 }
 
@@ -125,11 +125,16 @@ a {
   z-index: 2;
   opacity: 1;
 }
+.card-container .card .svg{
 
+}
+.card-container .card:hover .svg{
+
+}
 .card-container .card #brand-logo {
   position: absolute;
   display: inline;
-  width: 60px;
+  width: 70px;
   top: 17%;
   left: 50%;
   background-color: transparent;
@@ -139,8 +144,8 @@ a {
 }
 .card-container .card:hover #brand-logo{
   top: 25px;
-  left: 10%;
-  width: 40px;
+  left: 12%;
+  width: 50px;
   transform: translate(-50%, -50%);
 }
 
@@ -162,7 +167,7 @@ a {
   -webkit-transform-origin: center;
       -ms-transform-origin: center;
           transform-origin: center;
-  top:35%;
+  top:30%;
   transform: translate(5%,-50%)scale(0.9)rotateZ(25deg);
 }
 
