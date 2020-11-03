@@ -23,23 +23,43 @@ a {
   color: #e4e4e4;
 }
 
-.card-container {
-  position: relative;
-  margin: 0 9px;
-  border-radius: 20px;
-  width: calc(25% - 9px);
-  /* height: auto; */
-
+body{
+  display: flex;
+  margin-right: 30px;
+  margin-left: 30px;
 }
 
+.card-container {
+  position: relative;
+  margin: 6px;
+  border-radius: 20px;
+  width: calc(50% - 6px);
+  height: 425px;
+
+}
+@media (min-width: 640px){
+  .card-container {
+    width: calc(33.33% - 9px);
+    margin: 9px;
+  }
+}
+@media (min-width: 768px){
+  .card-container {
+    width: calc(25% - 9px);
+    margin: 9px;
+  }
+}
 .card:hover .contentBx:before{
   opacity: 1;
   transition-delay: .4s;
 }
 .card-container .card {
   position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
   background-image: url("./کتونی-مردانه-نایک-ایر-جردن-1.jpg");
-  background-size: contain;
+  background-size: 300px;
   background-repeat: no-repeat;
   -webkit-transition: ease-out 0.5s;
   -o-transition: ease-out 0.5s;
@@ -55,37 +75,6 @@ a {
   transition: ease-out 0.5s;
 }
 
-.card-container .card:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /*background: -o-linear-gradient(250deg, rgba(255, 0, 0, 1) 0%, rgba(128, 0, 1) 47%, rgba(117, 0, 1) 100%);
-  background: linear-gradient(200deg, rgba(255, 0, 0, 1) 0%, rgba(128, 0, 1) 47%, rgba(117, 0, 1) 100%);
-  /*background: radial-gradient(circle, rgb(68, 0, 0) 0%, rgba(109, 0, 0, 0.8) 17%, rgba(255,0,0,0) 100%);*/
-  /*-webkit-clip-path: polygon(0 0, 100% 0, 100% 88%, 0 0%);
-          clip-path: polygon(0 0, 100% 0, 100% 88%, 0 0%);*/
-  opacity: 0;
-  /*clip-path: circle(0px at 120% -10%);*/
-  -webkit-transition: ease-out 0.8s;
-  -o-transition: ease-out 0.8s;
-  transition: ease-out 0.8s;
-  border-radius: 20px;
-}
-
-.card-container .card:hover:before {
-  /*clip-path: circle(395px at 122% 0%);*/
-  /*-webkit-clip-path: polygon(0 0, 100% 0, 100% 132%, 0 17%);
-          clip-path: polygon(0 0, 100% 0, 100% 132%, 0 17%);*/
-  -webkit-transition-delay: .3s;
-       -o-transition-delay: .3s;
-          transition-delay: .3s;
-  z-index: 2;
-  opacity: 1;
-}
-
 .card-container .card #brand-logo {
   position: absolute;
   display: inline;
@@ -94,47 +83,6 @@ a {
   left: 15px;
   background-color: transparent;
   z-index: 3;
-}
-
-.card-container .card #brand-logo .img {
-  background-color: transparent
-}
-
-.card-container .card .imgBx {
-  position: absolute;
-  top: 25%;
-  z-index: 10;
-  width: 100%;
-  height: 220px;
-  -webkit-transition: ease-out 0.6s;
-  -o-transition: ease-out 0.6s;
-  transition: ease-out 0.6s;
-  background-repeat: no-repeat;
-}
-
-.card-container .card:hover .imgBx {
-  -webkit-transform: translatex(5%)scale(0.9)rotateZ(25deg);
-      -ms-transform: translatex(5%)scale(0.9)rotate(25deg);
-          transform: translatex(5%)scale(0.9)rotateZ(25deg);
-  -webkit-transform-origin: center;
-      -ms-transform-origin: center;
-          transform-origin: center;
-  -webkit-transition: ease-out 0.6s;
-  -o-transition: ease-out 0.6s;
-  transition: ease-out 0.6s;
-}
-
-.card-container .card .imgBx img {
-  position: absolute;
-  top: 50%;
-  left: 45%;
-  -webkit-transform: translate(-50%, -50%) rotate(-25deg);
-      -ms-transform: translate(-50%, -50%) rotate(-25deg);
-          transform: translate(-50%, -50%) rotate(-25deg);
-  width: 320px;
-  -webkit-transition: ease-out 0.6s;
-  -o-transition: ease-out 0.6s;
-  transition: ease-out 0.6s
 }
 
 .card-container .card .contentBx {
@@ -324,8 +272,4 @@ display: flex;
   -webkit-transition-delay: 0.4s;
        -o-transition-delay: 0.4s;
           transition-delay: 0.4s;
-}
-
-.image {
-  width: 320px;
 }

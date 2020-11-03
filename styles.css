@@ -1,0 +1,29 @@
+@font-face {
+    font-family: futura;
+    src: url(FuturaPTMedium.woff);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'futura', sans-serif;
+    direction: ltr !important;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0px;
+  }
+  
+  a {
+    margin: 0px;
+    text-decoration: none;
+  }
+
+  body{
+    display: flex;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
