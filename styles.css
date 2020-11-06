@@ -68,8 +68,8 @@ body {
     .product-name {
         font-size: 16px !important;
     }
-    .price,.stroke{
-        font-size: 16px !important; 
+    .price{
+        font-size: 22px !important; 
     }
 }
 
@@ -84,8 +84,8 @@ body {
     .product-name {
         font-size: 18px !important;
     }
-    .price,.stroke{
-        font-size: 18px !important; 
+    .price{
+        font-size: 24px !important; 
     }
 }
 
@@ -223,9 +223,18 @@ body {
 }
 
 
-.price,.stroke{
-    font-size: 14px;
-    font-size: 700;
+.product-price {
+    text-shadow: 2px 4px #00858a;
+    -webkit-text-stroke-width: 1px;
+    -moz-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #0d1b1e;
+    -moz-text-stroke-color: #0d1b1e;
+    color: transparent;
+}
+.price{
+    font-size: 20px;
+    font-size: 400;
+   
 }
 .card-container:hover {
     box-shadow:  1px 1px 10px #cfcfcf, 
