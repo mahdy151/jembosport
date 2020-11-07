@@ -1,15 +1,15 @@
-var tl = gsap.timeline({paused:true}), 
-    mySplitText = new SplitText(".product-name", {type:"words,chars"}), 
-    chars = mySplitText.chars; //an array of all the divs that wrap each character
-
-tl.from(chars, {duration: 1, opacity:0, scale:1, y:30, rotation:6,  ease:"power3.inOut", stagger: 0.03}, "+=0");
-
+var tl = gsap.timeline({paused:true}); 
+var textWrapper = document.querySelector('.product-name');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+var letters = $('.letter');
 
 
-document.getElementsByClassName(".card-container").onmouseover = function() {
-  tl.restart();
-}
+tl.from(letters, {duration:1 , opacity:0 , scale:1 , y:10 , rotation:10 ,  ease:"power3.inOut", stagger: 0.025}, "+=0.2");
 
-document.getElementsByClassName(".card-container").onmouseleave = function() {
-  tl.reverse();
-}
+$(".card-container").mouseenter(function() {
+tl.restart();
+});
+
+$(".card-container").mouseleave(function() {
+tl.reverse();
+});
