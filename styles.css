@@ -160,7 +160,6 @@ body {
     left: 50%;
     transform: translate(-50%);
     padding: .5rem;
-    opacity: 0;
     z-index: 101;
 }
 
@@ -169,6 +168,7 @@ body {
     position: absolute;
     right :0;
     top: 20px;
+    right: -50px;
     background: #bbff5a;
     box-shadow:  5px 5px 7px #aae852, 
                  -5px -5px 7px #ccff62;
@@ -176,12 +176,12 @@ body {
     padding-right: 5px;
     padding-top: 2px;
     border-radius: 20px 0px 0px 20px;
-    transition: all 0.7s ease-in-out;
+    /* transition: all 0.7s ease-in-out; */
     opacity: 0;
     z-index: 101;
 }
 
-.badge-title {
+.badge-title{
     font-size: 14px;
     font-weight: 700;
     line-height: 1.5;
@@ -214,17 +214,14 @@ body {
 
 .word {
     position: relative;
-    top: 40px;
-    transform: rotateZ(20deg);
     display: inline-block;
-    opacity: 0;
   }
 
 
 .product-price {
     position: relative;
-    top: 50px;
-    transition: all 1s cubic-bezier(0,0,.6,1.46);
+    /* top: 50px; */
+    /* transition: all 1s cubic-bezier(0,0,.6,1.46); */
     margin-left: 5px;
     margin-right: 10px;
     text-shadow: 2px 4px #ffffff;
@@ -238,7 +235,7 @@ body {
     position: relative;
     font-size: 18px;
     font-size: 200;
-    transition: 0.5 ease;
+    /* transition: 0.5 ease; */
 }
 
 .price:after {
@@ -252,6 +249,10 @@ body {
     box-shadow:  1px 1px 10px #cfcfcf, 
     -1px -1px 10px #ffffff;
 
+}
+
+.card-container:hover .product-info-box{
+    /* opacity: 1; */
 }
 
 @keyframes rotate {
