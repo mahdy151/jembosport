@@ -10,7 +10,7 @@ tl
 .from(".product-info-box", {duration:0.5 ,opacity:0 ,ease:"power2.in"})
 .from(words, {duration:0.5 , opacity:0 , scale:1 , y:20 , rotation:10 ,  ease:"power3.inout", stagger: 0.2})
 .to(".product-badge" , {duration:0.5 , x:-50 ,opacity:1 ,ease:"power1.out"}, "-=1")
-.from(".product-price", {duration:0.5 , y:40 ,ease:"back.out"}, "-=0.7");
+.from(".product-price", {duration:0.5 , y:40 ,ease:"back.inout(1)"}, "-=0.7");
 card.onmouseenter = function() {tl.play()};
 card.onmouseleave = function() {tl.reverse()};
 // card.onmouseenter = tl.restart;

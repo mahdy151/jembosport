@@ -174,7 +174,6 @@ body {
                  -5px -5px 7px #ccff62;
     padding-left: 8px;
     padding-right: 5px;
-    padding-top: 2px;
     border-radius: 20px 0px 0px 20px;
     opacity: 0;
     z-index: 101;
@@ -236,7 +235,7 @@ body {
 
 .price:after {
     content: attr(data-currency);
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
   position: absolute;
   top: 2px;
