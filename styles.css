@@ -30,5 +30,6 @@ svg {
 }
 
 .completedpath {
-  fill: white !important;
+    fill: white !important;
+    transition: all 0.5s ease-in;
 }
