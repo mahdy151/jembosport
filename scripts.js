@@ -3,46 +3,68 @@ var In = anime.timeline({autoplay:false});
 In
 .add({
     targets: '.loop1',
-    strokeDashoffset: [anime.setDashoffset, -1],
+    strokeDashoffset: [anime.setDashoffset, 0],
     easing: 'easeInOutCubic',
-    duration: 4000,
-    delay: anime.stagger(500, {start: 300}),
+    duration: 3000,
+    delay: function(el, i) { return i * 500 },
     begin: function(anim) {
-      $('.loop1').attr("stroke", "black");
-      $('.loop1').attr("fill", "transparent");
-    },
+         $('.loop1').attr("stroke", "black");
+         $('.loop1').attr("fill", "transparent");
+         $('.loop2').removeClass('completed')
+    }
 })
 .add({
     targets: '.loop2',
-    strokeDashoffset: [anime.setDashoffset, -1],
+    strokeDashoffset: [anime.setDashoffset, 0],
     easing: 'easeInOutCubic',
-    duration: 4000,
-    delay: anime.stagger(500),
+    duration: 3000,
+    delay: function(el, i) { return i * 500 },
+    offset: '-=2800',
     begin: function(anim) {
-      $('.loop2').attr("stroke", "white");
-      $('.loop2').attr("fill", "transparent");
-    },
-},'-=4300')
+       $('.loop2').attr("stroke", "white");
+       $('.loop2').attr("fill", "transparent")
+    }
+})
     // complete: function() {
     //   $('.loop2').addClass('completed');
 .add({
     targets: '.loop2',
     duration: 500,
-    fill: ['ffffff00','#fff'],
-    easing: 'easeOutBack',
-},'-=300');
+    offset: '-=300',
+    fill: '#fff',
+    easing: 'easeInOutExpo',
+    complete: function() {
+    $('.loop2').addClass('completed')}
 
-In.restart()
+});
+
+
+const handleenter = () => {
+    In.play();
+    In.restart()
+  };
+  const handleleave = () => {
+    $('.loop2').removeClass('completed');
+    In.reverse();
+    In.play()
+    //animation.restart()
+  };
+const btn = document.querySelector("button")
+btn.addEventListener("mouseenter", handleenter)
+btn.addEventListener("mouseleave", handleleave)
+// In.restart()
 // In.reverse()
 
-$('button').mouseenter(function () { 
+// $('button').mouseenter(function () { 
+//     In.seek(In.duration * 0)
+//     // In.restart()
+//     In.play()
+// });
+// $('button').mouseleave(function () { 
+//     In.reverse()
+    
     // In.restart()
-    In.play()
-});
-$('button').mouseleave(function () { 
-    In.reverse()
-    // In.restart()
-});
+// });
 // targets: 'path',
 // strokedashoffset: [anime.setdashoffset, 0],
 // duration: 2000,
