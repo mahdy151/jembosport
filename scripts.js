@@ -1,4 +1,4 @@
-var In = anime.timeline({});
+var In = anime.timeline({autoplay:false});
     
 In
 .add({
@@ -31,6 +31,18 @@ In
     fill: ['ffffff00','#fff'],
     easing: 'easeOutBack',
 },'-=300');
+
+In.restart()
+// In.reverse()
+
+$('button').mouseenter(function () { 
+    // In.restart()
+    In.play()
+});
+$('button').mouseleave(function () { 
+    In.reverse()
+    // In.restart()
+});
 // targets: 'path',
 // strokedashoffset: [anime.setdashoffset, 0],
 // duration: 2000,
