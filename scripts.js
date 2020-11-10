@@ -6,10 +6,10 @@ In
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: 'easeInOutCubic',
     duration: 3000,
-    delay: function(el, i) { return i * 500 },
+    delay: function(el, i) { return i * 300 },
     begin: function(anim) {
          $('.loop1').attr("stroke", "black");
-         $('.loop1').attr("fill", "transparent");
+        //  $('.loop1').attr("fill", "transparent");
          $('.loop2').removeClass('completed')
     }
 })
@@ -18,25 +18,19 @@ In
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: 'easeInOutCubic',
     duration: 3000,
-    delay: function(el, i) { return i * 500 },
-    offset: '-=2800',
+    delay: function(el, i) { return i * 300 },
+    offset: '-=4000',
     begin: function(anim) {
        $('.loop2').attr("stroke", "white");
-       $('.loop2').attr("fill", "transparent")
-    }
-})
+       
+    //    $('.loop2').attr("fill", "transparent")
+    },
+    complete: function() {
+        $('.loop2').addClass('completed')}
+});
     // complete: function() {
     //   $('.loop2').addClass('completed');
-.add({
-    targets: '.loop2',
-    duration: 500,
-    offset: '-=300',
-    fill: '#fff',
-    easing: 'easeInOutExpo',
-    complete: function() {
-    $('.loop2').addClass('completed')}
 
-});
 
 
 const handleenter = () => {
