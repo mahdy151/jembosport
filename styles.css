@@ -1,37 +1,34 @@
 body {
-    margin: 20px;
-    font-family: 'Lato';
-    font-weight: 300;
-    font-size: 1.2em;
-    background-color: #d40000;
-    display: flex;
-  }
-  
-  .anime-demo {
-    position: relative;
-  }
-  
-  svg {
-     padding: 10px;
-  }
-
-  .loop1{
-      z-index: 1;
-  }
-  .loop2{
-    z-index: 2;
-
+  margin: 20px;
+  font-family: 'Lato';
+  font-weight: 300;
+  font-size: 1.2em;
+  background-color: #d40000;
+  display: flex;
 }
-.completed{
-    filter: drop-shadow(10px 10px 1px black);
-    transition: filter 0.5s ease-in;
+
+.anime-demo {
+  position: relative;
+}
+
+svg {
+  padding: 10px;
+}
+
+.loop1 {
+  z-index: 1;
+}
+
+.loop2 {
+  z-index: 2;
 
 }
 
-/* svg {
-    position: absolute;
-    top: 100px;
-    left: 0;
-    width: 700px;
-    height: auto;
-} */
+.completed {
+  filter: drop-shadow(1px 1px 1px rgb(0, 0, 0)) !important;
+  transition: all 0.5s ease-in;
+}
+
+.completedpath {
+  fill: white !important;
+}

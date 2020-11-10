@@ -5,11 +5,12 @@ In
     targets: '.loop1',
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: 'easeInOutCubic',
-    duration: 3000,
+    // duration: 3000,
     delay: function(el, i) { return i * 300 },
     begin: function(anim) {
         $('.loop1').attr("stroke", "black");
         $('.loop1').attr("fill", "transparent");
+        $('svg').removeClass('completed');
         $('.loop2').removeClass('completed')
     }
 })
@@ -17,59 +18,29 @@ In
     targets: '.loop2',
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: 'easeInOutCubic',
-    duration: 3000,
+    // duration: 3000,
     delay: function(el, i) { return i * 300 },
-    offset: '-=4000',
+    offset: '-=10000',
     begin: function(anim) {
        $('.loop2').attr("stroke", "white");
         $('.loop2').attr("fill", "transparent")
     },
-    complete: function() {
-        $('.loop2').addClass('completed')}
+    complete: function(anim) {
+        $('.loop2').addClass('completedpath');
+        $('svg').addClass('completed')
+    }
 });
-    // complete: function() {
-    //   $('.loop2').addClass('completed');
-
-
 
 const handleenter = () => {
     In.play();
     In.restart()
   };
   const handleleave = () => {
+    $('svg').removeClass('completed');
     $('.loop2').removeClass('completed');
     In.reverse();
     In.play()
-    //animation.restart()
   };
 const btn = document.querySelector("button")
 btn.addEventListener("mouseenter", handleenter)
 btn.addEventListener("mouseleave", handleleave)
-// In.restart()
-// In.reverse()
-
-// $('button').mouseenter(function () { 
-//     In.seek(In.duration * 0)
-//     // In.restart()
-//     In.play()
-// });
-// $('button').mouseleave(function () { 
-//     In.reverse()
-    
-    // In.restart()
-// });
-// targets: 'path',
-// strokedashoffset: [anime.setdashoffset, 0],
-// duration: 2000,
-// easing: "easeOutsin",
-// direction: 'forward',
-// delay: anime.stagger(100, {start: 500})
-// });
-// .add({
-//   targets: 'path',
-//   trokedashoffset:[anime.setdashoffset, 0],
-//   duration: 2000,
-//   easing: "easeOutsin",
-//   direction: 'forward',
-//   delay: anime.stagger(100, {start: 500})
-// },'-=1800' );
