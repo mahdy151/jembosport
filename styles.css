@@ -22,7 +22,7 @@ body {
 
 }
 .completed{
-    filter: drop-shadow(1px 1px 1px black);
+    filter: drop-shadow(1px 1px 0.5px black);
     transition: filter 0.5s ease-in;
 
 }
@@ -31,6 +31,6 @@ svg {
     position: absolute;
     top: 100px;
     left: 0;
-    width: 70px;
+    width: 700px;
     height: auto;
 }
