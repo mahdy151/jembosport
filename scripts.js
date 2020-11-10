@@ -32,15 +32,16 @@ In
     easing: 'easeOutBack',
 },'-=300');
 
-In.restart()
+// In.restart()
 // In.reverse()
 
 $('button').mouseenter(function () { 
-    // In.restart()
-    In.play()
+    In.restart()
+    // In.play()
 });
 $('button').mouseleave(function () { 
     In.reverse()
+    In.restart()
     // In.restart()
 });
 // targets: 'path',
