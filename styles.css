@@ -21,4 +21,16 @@ body {
     z-index: 2;
 
 }
+.completed{
+    filter: drop-shadow(1px 1px 1px black);
+    transition: filter 0.5s ease-in;
 
+}
+
+svg {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 70px;
+    height: auto;
+}
