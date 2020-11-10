@@ -8,9 +8,9 @@ In
     duration: 3000,
     delay: function(el, i) { return i * 300 },
     begin: function(anim) {
-         $('.loop1').attr("stroke", "black");
-        //  $('.loop1').attr("fill", "transparent");
-         $('.loop2').removeClass('completed')
+        $('.loop1').attr("stroke", "black");
+        $('.loop1').attr("fill", "transparent");
+        $('.loop2').removeClass('completed')
     }
 })
 .add({
@@ -22,8 +22,7 @@ In
     offset: '-=4000',
     begin: function(anim) {
        $('.loop2').attr("stroke", "white");
-       
-    //    $('.loop2').attr("fill", "transparent")
+        $('.loop2').attr("fill", "transparent")
     },
     complete: function() {
         $('.loop2').addClass('completed')}
