@@ -25,11 +25,11 @@ svg {
 }
 
 .completed {
-  filter: drop-shadow(1px 1px 1px rgb(0, 0, 0)) !important;
+  filter: drop-shadow(1px 1px 1px rgb(0, 0, 0)) ;
   transition: all 0.5s ease-in;
 }
 
 .completedpath {
-    fill: white !important;
+    fill: white ;
     transition: all 0.5s ease-in;
 }
