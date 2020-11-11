@@ -20,7 +20,7 @@ In
     targets: '.loop1',
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: 'easeInOutCubic',
-    // duration: 3000,
+    duration: 1000 ,
     delay: function(el, i) { return i * 500 },
     begin: function(anim) {
         $('.loop1').attr("stroke", "black")
@@ -33,9 +33,9 @@ In
     targets: '.loop2',
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: 'easeInOutCubic',
-    // duration: 3000,
+    duration: 1000 ,
     delay: function(el, i) { return i * 500 },
-    offset: '-=2000',
+    offset: '-=1500',
     begin: function(anim) {
        $('.loop2').attr("stroke", "white")
         $('.loop2').attr("fill", "transparent")

@@ -1,13 +1,13 @@
 @font-face {
     font-family: futura;
     src: url(FuturaPTMedium.woff);
-    font-display: optional;
+    /* font-display: optional; */
 }
 
 @font-face {
     font-family: massir;
     src: url(Massir.Ballpoint.ttf);
-    font-display: optional;
+    /* font-display: optional; */
 }
 
 * {
@@ -18,7 +18,7 @@
 }
 
 .fa {
-    font-family: 'massir';
+    font-family: 'massir' !important;
 }
 
 h1,
@@ -94,7 +94,7 @@ body {
 
 #brand-logo {
     position: absolute;
-    width: 15%;
+    width: 18%;
     left: 15px;
     top: 15px;
     z-index: 101;
@@ -244,6 +244,24 @@ body {
     box-shadow:  1px 1px 10px #cfcfcf, 
     -1px -1px 10px #ffffff;
 
+}
+
+.loop1 {
+  z-index: 1;
+}
+
+.loop2 {
+  z-index: 2;
+}
+
+.completed {
+  filter: drop-shadow(0.5px 0.5px 5px #b3b3b3) drop-shadow(-0.5px -0.5px 5px #ffffff);
+  transition: all 0.5s ease-in;
+}
+
+.completedpath {
+    fill: white ;
+    transition: all 0.5s ease-in;
 }
 
 @keyframes rotate {
