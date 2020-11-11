@@ -1,3 +1,4 @@
+let In = anime.timeline({autoplay:false});
 let tl = gsap.timeline({paused: true});
 let textWrapper = document.querySelector('.product-name');
 let results = Splitting({
@@ -13,132 +14,48 @@ tl
 .from(".product-price", {duration:0.5 , y:40 ,ease:"back.inout(1)"}, "-=0.7");
 card.onmouseenter = function() {tl.play()};
 card.onmouseleave = function() {tl.reverse()};
-// card.onmouseenter = tl.restart;
-// card.onmouseleave = tl.reverse;
-// $(card).mouseenter(function () { 
-//   tl.restart();  
-// });
-// $(card).mouseleave(function () { 
-//     tl.reverse();  
-//   });
-// const animation = anime({
-//     targets: '.word',
-//     top:0,
-//     rotateZ: 0,
-//     opacity: 1,
-//     autoplay: false,
-//     easing: "easeOutQuad",
-//     delay: anime.stagger(200, {start: 200})
-// });
 
-// const infobox = anime({
-//     targets: '.product-info-box',
-//     opacity: [0,1],
-//     autoplay: false,
-//     easing: "easeOutQuad",
-// });
+In
+.add({
+    targets: '.loop1',
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing: 'easeInOutCubic',
+    // duration: 3000,
+    delay: function(el, i) { return i * 200 },
+    begin: function(anim) {
+        $('.loop1').attr("stroke", "black")
+        $('.loop1').attr("fill", "transparent")
+        $('svg').removeClass('completed')
+        $('.loop2').removeClass('completedpath')
+    }
+})
+.add({
+    targets: '.loop2',
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing: 'easeInOutCubic',
+    // duration: 3000,
+    delay: function(el, i) { return i * 200 },
+    offset: '-=5000',
+    begin: function(anim) {
+       $('.loop2').attr("stroke", "white")
+        $('.loop2').attr("fill", "transparent")
+    },
+    complete: function(anim) {
+        $('.loop2').addClass('completedpath')
+        $('svg').addClass('completed')
+    }
+});
 
-// function animateIn() {
-//     anime.remove('.product-info-box' , '.word');
-//     document.querySelector(".product-badge").style.opacity = "1";
-//     document.querySelector(".product-price").style.top = "0px";
-//     infobox.play();
-//     animation.play();
-// };
-
-// function animateOut() {
-//     anime.remove('.product-info-box' , '.word');
-//     document.querySelector(".product-badge").style.opacity = "0";
-//     document.querySelector(".product-price").style.top = "50px";
-//     infobox.reverse();
-//     animation.reverse();
-// };
-
-// card.onmouseenter = function() {animateIn()};
-// card.onmouseleave = function() {animateOut()};
-
-
-// var In = anime.timeline({
-//     autoplay: false,
-// });
-
-// In
-// .add({
-//     targets: '.product-info-box',
-//     autoplay: false,
-//     opacity: 1,
-//     duration: 300,
-//     easing: "easeOutQuad",
-// })
-// .add({
-//     targets: '.word',
-//     autoplay: false,
-//     top: 0,
-//     rotateZ: 0,
-//     opacity: 1,
-//     easing: "easeOutQuad",
-//     duration:750,
-//     delay: anime.stagger(100, {
-//         start: 10
-//     }),
-// });
-
-// card.onmouseenter = function() {
-//     In.restart();
-//     // In.remove('.word');
-//     // In.remove('.product-info-box');
-// };
-
-// var Out = anime.timeline({
-//     autoplay: false,
-// });
-
-// Out
-// .add({
-//     targets: '.word',
-//     autoplay: false,
-//     top: 40,
-//     rotateZ: 20,
-//     opacity: 0,
-//     easing: "easeOutQuad",
-//     duration:500,
-//     delay: anime.stagger(100, {start: 10 , direction: 'reverse'}),
-//     })
-// .add({
-//     targets: '.product-info-box',
-//     autoplay: false,
-//     opacity: 0,
-//     duration: 500,
-//     easing: "easeOutQuad",
-// });
-
-// card.onmouseleave = function() {
-//     Out.restart();
-//     // Out.remove('.word');
-//     // Out.remove('.product-info-box');
-// };
-
-
-// card.addEventListener("mouseleave", function() {
-//     anime.remove('.product-info-box');
-//     anime.remove('.word');
-//     var animation = anime({
-//         targets: '.word',
-//         top:40,
-//         rotateZ: 20,
-//         opacity: 0,
-//         easing: "easeOutQuad",
-//         delay: anime.stagger(200, {start: 100 , direction: 'reverse'})
-//     });
-
-//     var infobox = anime({
-//         targets: '.product-info-box',
-//         opacity: 0,
-//         easing: "easeOutQuad",
-//         delay: 500,
-//     });
-//     document.querySelector(".product-badge").style.opacity = "0";
-//     document.querySelector(".product-price").style.top = "50px";
-
-
-// });
+const handleenter = () => {
+    In.play()
+    In.restart()
+  };
+  const handleleave = () => {
+    $('svg').removeClass('completed')
+    $('.loop2').removeClass('completedpath')
+    In.reverse()
+    In.play()
+  };
+// const btn = document.querySelector("button")
+card.addEventListener("mouseenter", handleenter)
+card.addEventListener("mouseleave", handleleave)
