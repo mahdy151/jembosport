@@ -31,6 +31,7 @@ h4 {
 a {
   margin: 0px;
   text-decoration: none;
+  color: #252525;
 }
 
 div {
@@ -39,75 +40,226 @@ div {
 
 
 body {
-  display: flex;
-  margin-right: 30px;
-  margin-left: 30px;
+  /* display: flex; */
+  margin-right: 20px;
+  margin-left: 20px;
   min-height: 100vh;
   justify-content: center;
   align-items: center;
 
 }
 
-.card-container {
+.mag-card-container {
   position: relative;
   overflow: hidden;
-  margin: 6px;
+  margin: 9px;
   border-radius: 20px;
-  width: calc(50% - 6px);
+  width: calc(100% - 18px);
+  background: linear-gradient(225deg, #f7f7f7, #ffffff);
+  box-shadow: -5px 5px 5px #f5f5f5,
+    5px -5px 5px #ffffff;
 }
 
 @media (min-width: 640px) {
-  .card-container {
-    width: calc(33.33% - 9px);
+  body {
+    display: flex;
+  }
+
+  .mag-card-container {
+    width: calc(50% - 18px);
     margin: 9px;
   }
 
-  .badge-title {
+  .mag-category {
+    margin-top: 20px;
+    font-size: 12px !important;
+  }
+
+  .mag-title {
+    font-size: 14px !important;
+  }
+
+  .author-name {
     font-size: 16px !important;
-  }
-
-  .product-name {
-    font-size: 18px !important;
-  }
-
-  .price {
-    font-size: 24px !important;
   }
 }
 
 @media (min-width: 1024px) {
-  .card-container {
-    width: calc(25% - 9px);
+  body {
+    display: block;
+  }
+
+  .mag-card-container {
+    width: calc(100% - 18px);
     margin: 9px;
+    max-width: 1024px;
   }
 
-  .badge-title {
-    font-size: 18px !important;
+  .mag-card {
+    flex-direction: row !important;
+    direction: ltr !important;
+    align-items: center;
   }
 
-  .product-name {
-    font-size: 20px !important;
+  .mag-category {
+    margin-top: 20px;
+    font-size: 12px !important;
   }
 
-  .price {
-    font-size: 26px !important;
+  .mag-info-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .mag-title {
+    font-size: 14px !important;
+  }
+
+  .mag-author {
+    margin-top: 5px;
+    margin-bottom: -5px;
+  }
+
+  .author-name {
+    font-size: 16px !important;
+  }
+
+  .mag-excerpt {
+    display: -webkit-box !important;
+    font-size: 16px !important;
+  }
+
+  .mag-card-imag {
+    margin: 20px !important;
+    height: 100% !important;
+    width: 80% !important;
+    align-items: center;
   }
 }
 
-.product-card {
+.mag-card {
   position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
 }
 
-#brand-logo {
+.mag-info-box {
+  position: relative;
+  padding: 10px 20px 0 20px;
+  margin-top: 10px;
+}
+
+.mag-category {
+  position: relative;
+  font-size: 10px;
+}
+
+.mag-category h2:before {
+  content: '';
+  display: inline-block;
+  position: relative;
+  width: 8px;
+  height: 30px;
+  background: rgb(218, 27, 96);
+  background: linear-gradient(315deg, rgba(218, 27, 96, 1) 0%, rgba(255, 138, 0, 1) 100%);
+  margin-bottom: -11px;
+  margin-right: -20px;
+  margin-left: 2px;
+}
+
+.mag-title {
+  font-size: 10px;
+  padding: 0.5rem 5px 0.5rem 0.5rem;
+  line-height: 1.5;
+
+}
+
+
+.mag-excerpt {
+  position: relative;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 0.5rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  display: none;
+}
+
+.mag-author {
+
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.author-image {
+  position: relative;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
+
+.author-image img {
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 40px !important;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 12px 5px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+
+}
+
+.mag-card-container:hover .mag-card-imag img {
+  transform: rotateZ(-3deg)scale(1.1);
+}
+
+#half-circle {
   position: absolute;
-  width: 18%;
-  left: 15px;
-  top: 15px;
-  z-index: 101;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 40px;
+  fill: none;
+  stroke: url(#orange-to-pink);
+  stroke-width: 8px;
+  stroke-linecap: round;
+  pointer-events: none;
 }
 
-.product-img:after,
-.product-img:before {
+.author-name {
+  font-size: 14px;
+}
+
+.mag-card-imag {
+  position: relative;
+  margin: 0 20px 20px 20px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  border-radius: 20px;
+
+}
+
+.mag-card-imag img {
+  border-radius: 20px;
+  display: block;
+  width: 100%;
+  transition: all 0.5s ease;
+
+}
+
+
+.mag-card-imag:after,
+.mag-card-imag:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -115,11 +267,11 @@ body {
   margin-left: -21px;
   content: '';
   border-radius: 50%;
-  z-index: 1;
+  z-index: -1;
 
 }
 
-.product-img:after {
+.mag-card-imag:after {
 
   background-color: #eee;
   background-position: center;
@@ -133,7 +285,7 @@ body {
   background-size: 15px;
 }
 
-.product-img:before {
+.mag-card-imag:before {
   animation: rotate 1.1s linear infinite;
   background: linear-gradient(0deg, #eee, #ddd) 0 0%, linear-gradient(90deg, #ddd, #999) 100% 0%, linear-gradient(180deg, #999, #666) 100% 100%, linear-gradient(360deg, #666, #2d2d2d) 0 100%;
   background-repeat: no-repeat;
@@ -202,18 +354,7 @@ body {
 
 }
 
-.product-name {
-  position: relative;
-  font-size: 14px;
-  font-weight: 700;
-  margin-right: 10px;
-  margin-left: 5px;
-  line-height: 1em;
-  display: -webkit-box;
-  overflow: hidden;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
+
 
 .product-name a {
   color: rgb(20, 20, 20);
