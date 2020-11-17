@@ -1,24 +1,24 @@
 @font-face {
   font-family: futura;
   src: url(FuturaPTMedium.woff);
-  /* font-display: optional; */
+  font-display: swap;
 }
 
 @font-face {
   font-family: massir;
   src: url(Massir.Ballpoint.ttf);
-  /* font-display: optional; */
+  font-display: swap;
 }
 
 * {
   margin: 0;
   padding: 0;
-  font-family: 'futura', sans-serif;
-  direction: ltr !important;
+  direction: rtl !important;
 }
 
 .fa {
-  font-family: 'massir' !important;
+  font-family: 'futura', 'massir', sans-serif !important;
+  direction: rtl !important;
 }
 
 h1,
