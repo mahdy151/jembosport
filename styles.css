@@ -40,7 +40,7 @@ div {
 
 
 body {
-  display: flex;
+  display: blcok;
   margin-right: 10px;
   margin-left: 10px;
   min-height: 100vh;
@@ -64,34 +64,32 @@ body {
     5px -5px 5px #ffffff;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 640px) {
+  body {
+    display: flex !important;
+  }
 
   .mag-card-container {
-    width: calc(100% - 18px) !important;
+    /* width: calc(100% - 18px) !important; */
     margin: 9px;
     max-width: 1366px;
     justify-content: center;
   }
 
-  .mag-card {
-    flex-direction: row !important;
-    /* direction: ltr !important; */
-    align-items: center;
-  }
 
-  .mag-category {
+  */ .mag-category {
     margin-top: 0px !important;
     font-size: 12px !important;
   }
 
   .mag-info-box {
-    width: 65%;
+    /* width: 65%; */
     margin-bottom: 20px;
   }
 
   .mag-title {
     font-size: 14px !important;
-    padding: 0.5rem 5px 1.5rem 0.5rem !important;
+    padding: 0.5rem 5px 0.5rem 0.5rem !important;
   }
 
   .mag-author {
@@ -103,22 +101,6 @@ body {
     font-size: 16px !important;
   }
 
-  .mag-excerpt h3:before {
-    display: none !important;
-  }
-
-  .mag-excerpt:before {
-    content: '';
-    display: inline-block;
-    position: relative;
-    width: 15%;
-    height: 4px;
-    background: rgb(218, 27, 96);
-    background: linear-gradient(315deg, rgba(218, 27, 96, 1) 0%, rgba(255, 138, 0, 1) 100%);
-    margin-bottom: 8px;
-    margin-right: 40%;
-  }
-
   .mag-excerpt {
     display: -webkit-box !important;
     font-size: 18px !important;
@@ -126,11 +108,10 @@ body {
 
   .mag-card-imag {
     margin: 20px !important;
-    height: 100% !important;
-    width: 100% !important;
     align-items: center;
   }
 }
+
 
 .mag-card {
   position: relative;
@@ -142,7 +123,7 @@ body {
 
 .mag-info-box {
   position: relative;
-  padding: 10px 20px 0 20px;
+  padding: 10px 20px 10px 20px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -200,7 +181,7 @@ body {
   display: inline-block;
   position: relative;
   width: 15px;
-  height: 3px;
+  height: 4px;
   background: rgb(218, 27, 96);
   background: linear-gradient(315deg, rgba(218, 27, 96, 1) 0%, rgba(255, 138, 0, 1) 100%);
   margin-bottom: 1px;
