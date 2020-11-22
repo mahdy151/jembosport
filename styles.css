@@ -64,37 +64,7 @@ body {
     5px -5px 5px #ffffff;
 }
 
-/* @media (min-width: 640px) {
-  body {
-    display: flex;
-    flex-flow: column wrap;
-    align-content: space-between;
-    height: 1800px;
-  }
-
-  .mag-card-container {
-    width: calc(50% - 18px) !important;
-    margin: 9px;
-  }
-
-  .mag-category {
-    margin-top: 10px !important;
-    font-size: 12px !important;
-  }
-
-  .mag-title {
-    font-size: 12px !important;
-  }
-
-  .author-name {
-    font-size: 16px !important;
-  }
-} */
-
 @media (min-width: 1024px) {
-  /* body {
-    display: block;
-  } */
 
   .mag-card-container {
     width: calc(100% - 18px) !important;
