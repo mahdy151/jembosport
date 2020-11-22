@@ -174,18 +174,17 @@ body {
 
 .mag-info-box {
   position: relative;
-  padding: 10px 0 0 20px;
+  padding: 10px 20px 10px 20px;
   margin-top: 10px;
-  margin-right: 20px;
+  margin-bottom: 10px;
 }
 
 .mag-category {
   position: relative;
   font-size: 10px;
   display: inline-block;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   margin-right: 20px;
-
 }
 
 .mag-category h2:before {
@@ -203,9 +202,8 @@ body {
 
 .mag-title {
   font-size: 10px;
-  padding: 0.5rem 0 0.5rem 0.5rem;
+  padding: 0.5rem 5px 0.5rem 0.5rem;
   line-height: 1.5;
-
 }
 
 .post-title {
@@ -238,6 +236,18 @@ body {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   /* display: none; */
+}
+
+.mag-excerpt h3:before {
+  content: '';
+  display: inline-block;
+  position: relative;
+  width: 15px;
+  height: 4px;
+  background: rgb(218, 27, 96);
+  background: linear-gradient(315deg, rgba(218, 27, 96, 1) 0%, rgba(255, 138, 0, 1) 100%);
+  margin-bottom: 1px;
+  margin-left: 2px;
 }
 
 .mag-author {
