@@ -188,6 +188,30 @@ body {
 
 }
 
+.post-title {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+
+}
+
+.post-title:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 30%;
+  right: -0.5%;
+  bottom: 0;
+  background-color: #60ffea93;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.post-title:hover:after {
+  width: 101%;
+}
+
 
 .mag-excerpt {
   position: relative;
