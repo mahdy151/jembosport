@@ -183,35 +183,29 @@ body {
 
 .mag-title {
   font-size: 10px;
-  padding: 0.5rem 5px 0.5rem 0.5rem;
+  padding: 0.5rem 0 0.5rem 0.5rem;
   line-height: 1.5;
 
 }
 
 .post-title {
   position: relative;
-  display: inline-block;
+  display: inline;
   z-index: 1;
+  width: calc(100%);
+  background-image: linear-gradient(transparent calc(100% - 10px), #60ffea33 10px);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 0;
+  padding-right: 3px;
+  padding-left: 3px;
+  transition: background-size 0.5s;
 
 }
 
-.post-title:after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  width: 0;
-  height: 30%;
-  right: -0.5%;
-  bottom: 0;
-  background-color: #60ffea93;
-  -webkit-transition: all ease 0.3s;
-  transition: all ease 0.3s;
+.mag-title :hover .post-title {
+  background-size: 100%;
 }
-
-.post-title:hover:after {
-  width: 101%;
-}
-
 
 .mag-excerpt {
   position: relative;
