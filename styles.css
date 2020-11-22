@@ -46,7 +46,15 @@ body {
   min-height: 100vh;
   /* justify-content: center;
   align-items: center; */
+}
 
+.slider {
+  display: flex;
+  overflow-x: auto;
+  width: 100%;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 .mag-card-container {
@@ -54,11 +62,21 @@ body {
   overflow: hidden;
   margin: 9px;
   border-radius: 20px;
-  width: calc(100% - 18px);
+  width: calc(85% - 18px);
   background: linear-gradient(225deg, #f3f3f3, #ffffff);
   transition: box-shadow 0.5s ease;
-  /* box-shadow: -5px 5px 5px #f5f5f5,
-    5px -5px 5px #ffffff; */
+  /* overflow-x: auto; */
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px !important;
+  max-width: 325px !important;
 }
 
 .mag-card-container:hover {
@@ -158,6 +176,7 @@ body {
   position: relative;
   padding: 10px 20px 0 20px;
   margin-top: 10px;
+  margin-right: 20px;
 }
 
 .mag-category {
@@ -272,7 +291,7 @@ body {
 
 .mag-card-imag {
   position: relative;
-  margin: 0 20px 20px 20px;
+  margin: 20px 20px 0px 20px;
   overflow: hidden;
   transition: all 0.5s ease;
   border-radius: 20px;
@@ -284,6 +303,8 @@ body {
   display: block;
   width: 100%;
   transition: all 0.5s ease;
+  height: 180px;
+  object-fit: cover;
 
 }
 
