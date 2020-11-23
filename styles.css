@@ -282,3 +282,17 @@ body {
   width: 42px;
   height: 42px;
 }
+
+svg#play-button {
+  position: absolute;
+  z-index: 35;
+  display: inline;
+  top: 10px;
+  width: 15%;
+  right: 10px;
+}
+
+.mag-card-container:hover #ainmated-01,
+.mag-card-container:hover #animated-02 {
+  animation: ;
+}
