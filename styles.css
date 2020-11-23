@@ -64,6 +64,73 @@ body {
     5px -5px 5px #ffffff;
 }
 
+@media (min-width: 640px) {
+
+  .mag-card-container {
+    width: calc(100% - 18px) !important;
+    margin: 9px;
+    max-width: 1366px;
+    justify-content: center;
+  }
+
+  .mag-card {
+    flex-direction: row !important;
+    align-items: center;
+  }
+
+  .mag-category {
+    margin-top: 0px !important;
+    font-size: 11px !important;
+  }
+
+  .mag-info-box {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .mag-title {
+    font-size: 11px !important;
+    padding: 0.5rem 5px 1.5rem 0.5rem !important;
+  }
+
+  .mag-author {
+    margin-top: 5px;
+    margin-bottom: -5px;
+  }
+
+  .author-name {
+    font-size: 16px !important;
+  }
+
+  .mag-excerpt h3:before {
+    display: none !important;
+  }
+
+  .mag-excerpt:before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    width: 15%;
+    height: 4px;
+    background: rgb(218, 27, 96);
+    background: linear-gradient(315deg, rgba(218, 27, 96, 1) 0%, rgba(255, 138, 0, 1) 100%);
+    margin-bottom: 8px;
+    margin-right: 40%;
+  }
+
+  .mag-excerpt {
+    display: -webkit-box !important;
+    font-size: 15px !important;
+  }
+
+  .mag-card-imag {
+    margin: 20px !important;
+    height: 100% !important;
+    width: 100% !important;
+    align-items: center;
+  }
+}
+
 @media (min-width: 1024px) {
 
   .mag-card-container {
@@ -75,7 +142,6 @@ body {
 
   .mag-card {
     flex-direction: row !important;
-    /* direction: ltr !important; */
     align-items: center;
   }
 
@@ -85,7 +151,7 @@ body {
   }
 
   .mag-info-box {
-    width: 65%;
+    width: 80%;
     margin-bottom: 20px;
   }
 
@@ -132,6 +198,22 @@ body {
   }
 }
 
+.mag-category h2 {
+  color: #404040;
+  font-weight: 400;
+}
+
+.mag-title h1 {
+  font-weight: 700;
+  color: #252525;
+
+}
+
+.mag-excerpt h3 {
+  color: #404040;
+  font-weight: 200;
+}
+
 .mag-card {
   position: relative;
   width: 100%;
@@ -160,11 +242,11 @@ body {
   content: '';
   display: inline-block;
   position: relative;
-  width: 8px;
-  height: 30px;
+  width: 6px;
+  height: 25px;
   background: rgb(218, 27, 96);
   background: linear-gradient(315deg, rgba(218, 27, 96, 1) 0%, rgba(255, 138, 0, 1) 100%);
-  margin-bottom: -11px;
+  margin-bottom: -9px;
   margin-right: -20px;
   margin-left: 2px;
 }
@@ -211,7 +293,7 @@ body {
   position: relative;
   font-size: 12px;
   font-weight: 700;
-  padding: 0.5rem;
+  margin: 0.5rem;
   line-height: 1.5;
   display: -webkit-box;
   overflow: hidden;
