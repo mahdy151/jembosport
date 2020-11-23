@@ -146,6 +146,29 @@ body {
   }
 }
 
+.mag-category h2 {
+  color: #404040;
+  font-weight: 400;
+}
+
+.mag-title h1 {
+  font-weight: 700;
+  color: #252525;
+
+}
+
+.mag-excerpt h3 {
+  color: #404040;
+  font-weight: 200;
+}
+
+.author-name h4 {
+  color: #404040;
+  font-weight: 400;
+}
+
+
+
 .mag-card {
   position: relative;
   width: 100%;
@@ -172,11 +195,11 @@ body {
   content: '';
   display: inline-block;
   position: relative;
-  width: 8px;
-  height: 30px;
+  width: 6px;
+  height: 25px;
   background: rgb(218, 27, 96);
   background: linear-gradient(315deg, rgba(218, 27, 96, 1) 0%, rgba(255, 138, 0, 1) 100%);
-  margin-bottom: -11px;
+  margin-bottom: -9px;
   margin-right: -20px;
   margin-left: 2px;
 }
