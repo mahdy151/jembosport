@@ -28,7 +28,7 @@ In
         },
         offset: '-=1500',
         begin: function (anim) {
-            $('.loop2').attr("stroke", "rgb(30, 30, 30)")
+            $('.loop2').attr("stroke", "rgb(40, 40, 40)")
             $('.loop2').attr("fill", "transparent")
         },
         complete: function (anim) {

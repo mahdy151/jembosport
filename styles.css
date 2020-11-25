@@ -278,7 +278,7 @@ body {
 }
 
 .completedpath {
-  fill: rgb(30, 30, 30);
+  fill: rgb(40, 40, 40);
   transition: all 0.5s ease-in;
 }
 
