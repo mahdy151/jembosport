@@ -12,7 +12,7 @@ In
             return i * 500
         },
         begin: function (anim) {
-            $('.loop1').attr("stroke", "black")
+            $('.loop1').attr("stroke", "white")
             $('.loop1').attr("fill", "transparent")
             $('svg').removeClass('completed')
             $('.loop2').removeClass('completedpath')
@@ -28,7 +28,7 @@ In
         },
         offset: '-=1500',
         begin: function (anim) {
-            $('.loop2').attr("stroke", "white")
+            $('.loop2').attr("stroke", "rgb(30, 30, 30)")
             $('.loop2').attr("fill", "transparent")
         },
         complete: function (anim) {
